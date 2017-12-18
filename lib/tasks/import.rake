@@ -10,5 +10,11 @@ namespace :import do
     file = File.open('/home/ubuntu/workspace/ces/db/csv/provider.csv')
     Provider.import_file(file)
   end
+  
+  desc "TODO"
+  task eligibility_csv: :environment do
+    file = File.open('/home/ubuntu/workspace/ces/db/csv/eligibility.csv')
+    Eligibility.import_file(file)
+  end
 
 end

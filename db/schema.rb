@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218183731) do
+ActiveRecord::Schema.define(version: 20171218192758) do
 
   create_table "clients", force: :cascade do |t|
     t.integer "sp_client_id"
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20171218183731) do
   end
 
   create_table "eligibilities", force: :cascade do |t|
-    t.integer "provider_id"
-    t.integer "client_id"
+    t.integer "sp_provider_id"
+    t.integer "sp_client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

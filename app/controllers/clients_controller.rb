@@ -1,6 +1,8 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
-
+  before_action do 
+    redirect_to root_path unless current_user && current_user.admin?
+  end
   # GET /clients
   # GET /clients.json
   def index

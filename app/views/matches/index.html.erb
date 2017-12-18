@@ -14,8 +14,8 @@
   <tbody>
     <% @matches.each do |match| %>
       <tr>
-        <td><%= match.project_id %></td>
-        <td><%= match.client_id %></td>
+        <td><%= match.sp_provider_id %></td>
+        <td><%= match.sp_client_id %></td>
         <td><%= link_to 'Show', match %></td>
         <td><%= link_to 'Edit', edit_match_path(match) %></td>
         <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>

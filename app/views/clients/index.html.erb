@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Spid</th>
+      <th>SP Client ID</th>
       <th>Viscore</th>
       <th>Rank</th>
       <th colspan="3"></th>
@@ -15,7 +15,7 @@
   <tbody>
     <% @clients.each do |client| %>
       <tr>
-        <td><%= client.SPID %></td>
+        <td><%= client.sp_client_id %></td>
         <td><%= client.VIscore %></td>
         <td><%= client.rank %></td>
         <td><%= link_to 'Show', client %></td>

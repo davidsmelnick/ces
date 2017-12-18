@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218151453) do
+ActiveRecord::Schema.define(version: 20171218183731) do
 
   create_table "clients", force: :cascade do |t|
     t.integer "sp_client_id"
-    t.integer "VIscore"
+    t.integer "vi_score"
     t.integer "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

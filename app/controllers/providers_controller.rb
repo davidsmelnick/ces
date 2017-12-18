@@ -1,7 +1,7 @@
 class ProvidersController < ApplicationController
   before_action :set_provider, only: [:show, :edit, :update, :destroy]
   before_action do 
-    redirect_to root_path unless current_user && current_user.admin?
+    redirect_to root_path, alert: 'Access Denied' unless current_user && current_user.admin?
   end
 
   # GET /providers

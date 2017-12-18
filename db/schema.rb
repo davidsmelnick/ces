@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218192758) do
+ActiveRecord::Schema.define(version: 20171218203309) do
 
   create_table "clients", force: :cascade do |t|
     t.integer "sp_client_id"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20171218192758) do
   end
 
   create_table "matches", force: :cascade do |t|
-    t.integer "sp_project_id"
+    t.integer "sp_provider_id"
     t.integer "sp_client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

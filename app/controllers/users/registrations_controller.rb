@@ -1,7 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   skip_before_action :require_no_authentication
   before_action do 
-    redirect_to root_path unless current_user && current_user.admin?
+    redirect_to root_path, alert: 'Access Denied' unless current_user && current_user.admin?
   end
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]

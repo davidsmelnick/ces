@@ -17,4 +17,14 @@ namespace :import do
     Eligibility.import_file(file)
   end
 
+  desc "all three imports"
+  task csvs: :environment do
+    p_file = File.open('/home/ubuntu/workspace/ces/db/csv/provider.csv')
+    c_file = File.open('/home/ubuntu/workspace/ces/db/csv/client.csv')
+    e_file = File.open('/home/ubuntu/workspace/ces/db/csv/eligibility.csv')
+    Client.import_file(c_file)
+    Provider.import_file(p_file)
+    Eligibility.import_file(e_file)
+  end
+
 end

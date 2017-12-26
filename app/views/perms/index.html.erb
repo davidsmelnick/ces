@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Perms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @perms.each do |perm| %>
+      <tr>
+        <td><%= perm.description %></td>
+        <td><%= link_to 'Show', perm %></td>
+        <td><%= link_to 'Edit', edit_perm_path(perm) %></td>
+        <td><%= link_to 'Destroy', perm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Perm', new_perm_path %>

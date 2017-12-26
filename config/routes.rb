@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :organizations
+  resources :perms
+  resources :user_perms
+  resources :proj_types
   resources :clients
   resources :providers
   resources :matches

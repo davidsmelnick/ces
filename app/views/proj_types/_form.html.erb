@@ -1,0 +1,32 @@
+<%= form_with(model: proj_type, local: true) do |form| %>
+  <% if proj_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(proj_type.errors.count, "error") %> prohibited this proj_type from being saved:</h2>
+
+      <ul>
+      <% proj_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :proj_type_id %>
+    <%= form.number_field :proj_type_id, id: :proj_type_proj_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :proj_type_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_code %>
+    <%= form.number_field :service_code, id: :proj_type_service_code %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

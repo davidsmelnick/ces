@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Proj Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Proj type</th>
+      <th>Description</th>
+      <th>Service code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proj_types.each do |proj_type| %>
+      <tr>
+        <td><%= proj_type.proj_type_id %></td>
+        <td><%= proj_type.description %></td>
+        <td><%= proj_type.service_code %></td>
+        <td><%= link_to 'Show', proj_type %></td>
+        <td><%= link_to 'Edit', edit_proj_type_path(proj_type) %></td>
+        <td><%= link_to 'Destroy', proj_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proj Type', new_proj_type_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_perm.user_id %>
+</p>
+
+<p>
+  <strong>Perm:</strong>
+  <%= @user_perm.perm_id %>
+</p>
+
+<%= link_to 'Edit', edit_user_perm_path(@user_perm) %> |
+<%= link_to 'Back', user_perms_path %>

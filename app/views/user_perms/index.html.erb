@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Perms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Perm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_perms.each do |user_perm| %>
+      <tr>
+        <td><%= user_perm.user_id %></td>
+        <td><%= user_perm.perm_id %></td>
+        <td><%= link_to 'Show', user_perm %></td>
+        <td><%= link_to 'Edit', edit_user_perm_path(user_perm) %></td>
+        <td><%= link_to 'Destroy', user_perm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Perm', new_user_perm_path %>

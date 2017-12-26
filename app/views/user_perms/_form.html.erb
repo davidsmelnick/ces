@@ -1,0 +1,27 @@
+<%= form_with(model: user_perm, local: true) do |form| %>
+  <% if user_perm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_perm.errors.count, "error") %> prohibited this user_perm from being saved:</h2>
+
+      <ul>
+      <% user_perm.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :user_perm_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :perm_id %>
+    <%= form.number_field :perm_id, id: :user_perm_perm_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resources :providers
   resources :matches
   devise_for :users, controllers: { sessions: 'users/sessions' , registrations: 'users/registrations'}
-  root to: 'matches#new'
+  root to: 'matches#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

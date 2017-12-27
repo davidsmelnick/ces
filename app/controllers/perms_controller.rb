@@ -1,4 +1,4 @@
-class PermsController < ApplicationController
+class PermsController < AdminController
   before_action :set_perm, only: [:show, :edit, :update, :destroy]
 
   # GET /perms

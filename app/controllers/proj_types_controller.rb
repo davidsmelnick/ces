@@ -1,4 +1,4 @@
-class ProjTypesController < ApplicationController
+class ProjTypesController < AdminController
   before_action :set_proj_type, only: [:show, :edit, :update, :destroy]
 
   # GET /proj_types

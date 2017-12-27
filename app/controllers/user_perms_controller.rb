@@ -1,4 +1,4 @@
-class UserPermsController < ApplicationController
+class UserPermsController < AdminController
   before_action :set_user_perm, only: [:show, :edit, :update, :destroy]
 
   # GET /user_perms
